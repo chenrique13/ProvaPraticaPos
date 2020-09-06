@@ -92,11 +92,11 @@ public class Livro implements Publicacao {
 	@Override
 	public void folhear(int pagina) {
 		if (isAberto() == true) {
-			if (pagina >= 0 || pagina <= getTotalPaginas()) {
-				System.out.println("Pagina atual: " + getPaginaAtual());
+			if (pagina >= 0 && pagina <= this.getTotalPaginas()) {
+				System.out.println("Pagina atual: " + this.getPaginaAtual());
 				this.setPaginaAtual(pagina);
 			} else {
-				System.out.println("Pagina invalida!");
+				System.out.println("Numero da pagina invalido!");
 			}
 		} else {
 			System.out.println("Livro fechado");

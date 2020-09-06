@@ -7,10 +7,10 @@ import quesitoUm.Pessoa;
 
 public class Principal {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// 2A
 		Pessoa p1 = new Pessoa("Carlos", 25, "masculino");
-		Pessoa p2 = new Pessoa("Jessica", 25, "feminino");
+		Pessoa p2 = new Pessoa("Jessica", 24, "feminino");
 
 		// 2B
 		Livro l1 = new Livro("Titulo1", "Autor1", 10);
@@ -27,7 +27,7 @@ public class Principal {
 		ligandoLivroPessoa(p2, a2);
 
 		// 2D
-		System.out.println("Detalhes: Titulo, Autor, Total de paginas, Aberto, Nome da pessoa");
+		System.out.println("Detalhes: Titulo, Autor, Total de paginas, Pagina atual, Aberto, Nome da pessoa");
 		System.out.println(l1.detalhes());
 		System.out.println(l2.detalhes());
 		System.out.println(l3.detalhes());
@@ -67,7 +67,7 @@ public class Principal {
 
 		a2.abrir();
 		a2.avancarPagina();
-		a2.folhear(gerador1.nextInt(26));
+		a2.folhear(gerador1.nextInt(100));
 		
 		System.out.println();
 		
